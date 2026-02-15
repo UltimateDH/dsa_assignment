@@ -42,7 +42,7 @@ int swaps = 0;
 
 ---
 
-## (c) Organization of main()
+## (c) In main()
 
 1. Accept value of N.
 2. Generate N random numbers.
