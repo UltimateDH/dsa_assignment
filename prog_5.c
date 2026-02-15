@@ -29,3 +29,27 @@ void BFS(int start) {
         }
     }
 }
+
+int main() {
+    n = 4;
+    int graph[4][4] = {
+        {0,1,1,0},
+        {1,0,1,1},
+        {1,1,0,0},
+        {0,1,0,0}
+    };
+
+    for(int i=0;i<n;i++)
+        for(int j=0;j<n;j++)
+            adj[i][j]=graph[i][j];
+
+    printf("DFS: ");
+    DFS(0);
+
+    for(int i=0;i<n;i++) visited[i]=0;
+
+    printf("\nBFS: ");
+    BFS(0);
+
+    return 0;
+}
