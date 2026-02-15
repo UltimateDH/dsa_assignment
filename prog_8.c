@@ -34,3 +34,21 @@ void selectionSort(int arr[], int n, int *comp, int *swaps) {
         }
     }
 }
+
+/* ---------- Insertion Sort ---------- */
+void insertionSort(int arr[], int n, int *comp, int *swaps) {
+    for(int i=1;i<n;i++){
+        int key = arr[i];
+        int j = i-1;
+
+        while(j>=0){
+            (*comp)++;
+            if(arr[j] > key){
+                arr[j+1] = arr[j];
+                (*swaps)++;
+                j--;
+            } else break;
+        }
+        arr[j+1] = key;
+    }
+}
