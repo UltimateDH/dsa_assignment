@@ -38,3 +38,17 @@ void printList(struct Node* head) {
         head = head->next;
     }
 }
+
+int main() {
+    struct Node* head = malloc(sizeof(struct Node));
+    head->data = 1;
+    head->prev = head->next = NULL;
+
+    insertAfter(head, 2);
+    insertAfter(head->next, 3);
+
+    deleteNode(&head, head->next);
+
+    printList(head);
+    return 0;
+}
