@@ -30,7 +30,7 @@ Checks whether the expression is balanced.
 
 ---
 
-## (c) Organization of main()
+## (c) In main()
 
 1. Accepts expression from user.
 2. Calls `isBalanced()`.
