@@ -16,3 +16,21 @@ void bubbleSort(int arr[], int n, int *comp, int *swaps) {
         }
     }
 }
+
+/* ---------- Selection Sort ---------- */
+void selectionSort(int arr[], int n, int *comp, int *swaps) {
+    for(int i=0;i<n-1;i++){
+        int min = i;
+        for(int j=i+1;j<n;j++){
+            (*comp)++;
+            if(arr[j] < arr[min])
+                min = j;
+        }
+        if(min != i){
+            int temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+            (*swaps)++;
+        }
+    }
+}
